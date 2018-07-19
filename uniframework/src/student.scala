@@ -1,59 +1,47 @@
+class course(
+    var course_ID:Int =0,
+    var dept_ID:Int = 0,
+    var course_Title:String = "",
+    var course_Descript:String = "",
+    var course_Credit:String = "",
+    var course_Level:String = "",
+    var course_Duration:String = "")
+{
 
+  def courseID(value: Int):Unit = course_ID = value
+  def deptID(value: Int):Unit = dept_ID = value
+  def courseTitle(value: String): Unit = course_Title = value
+  def courseDescript(value: String): Unit = course_Descript = value
+  def courseCredit(value: String): Unit = course_Credit = value
+  def courseLevel(value: String): Unit = course_Level = value
+  def courseDuration(value: String): Unit = course_Duration = value
+  def getCourseID = course_ID;
+  def getDeptID = dept_ID;
+  def getTitle = course_Title;
+  def getDescript = course_Descript;
+  def getCredit = course_Credit;
+  def getLevel = course_Level;
+  def getDuration = course_Duration;
 
-/**
-  * Created by 216074630 on 6/20/2018.
-  */
-
-class student(val stu_Num:Int,val fn:String,val ln:String,val dept_ID:Int,val email:String,val stu_Initial:String){
-
-  var student_num:Int=stu_Num
-  var department:Int=dept_ID
-  var name:String =fn
-  var surname :String = ln
-  var student_Initial :String = stu_Initial
-  var student_email:String = email
-  def getStudeNum(): Int = {
-    return this.student_num;
-  }
-
-  def getDepartment(): Int = {
-    return this.department;
-  }
-
-  def getName(): String = {
-    return this.name;
-  }
-
-  def getSurname(): String = {
-    return this.surname;
-  }
-
-  def getStudentInitials(): String = {
-    return this.student_Initial;
-  }
-
-  def getEmail(): String = {
-    return this.student_email;
-  }
-  def show()={
-
-    println("StudentNumber:"+ stu_Num)
-    println("Department:"+ department)
-    println("Name: "+name)
-    println("Surname: "+surname)
-    println("Initial:"+ stu_Initial)
-    println("Email:"+student_email)
+  def show() = {
+    println("Course ID: " + course_ID)
+    println("Department ID: " + dept_ID)
+    println("Course Title: " + course_Title)
+    println("Course Descript: " + course_Descript)
+    println("Course Credit: " + course_Credit)
+    println("Course Level: " + course_Level)
+    println("Course Duration: " + course_Duration)
 
 
   }
+
 
 }
 
-
-object student extends App{
+object course extends App{
   // Your code here!
-  var s = new student(216074630,"Thomas","Miller",21625,"216074630@mycput.ac.za","TH")
+  var c = new course(216256, 258, "ICT", "Progaramming", "256S", "25639", "5years")
 
-  s.show();
-
+  //println(c.getCourseID());
+  c.show();
 }
